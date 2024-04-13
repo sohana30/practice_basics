@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Image Gallery</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <h1>Interactive Image Gallery</h1>
+    <div class="gallery" aria-label="Image Gallery">
+      <div class="gallery__images">
+          <img class="gallery__image" src="images/photographer1.jpg" alt="Portrait of a photographer1">
+          <img class="gallery__image" src="images/photographer2.jpg" alt="Portrait of another photographer2">
+          <img class="gallery__image" src="images/photographer1.jpg" alt="Portrait of a photographer3">
+          <img class="gallery__image" src="images/photographer2.jpg" alt="Portrait of another photographer4">
+          <img class="gallery__image" src="images/photographer1.jpg" alt="Portrait of a photographer4">
+          <img class="gallery__image" src="images/photographer2.jpg" alt="Portrait of another photographer4">
+          <!-- Add more images as needed -->
+      </div>
+    </div>
+    <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription">
+      <button class="modal__close" aria-label="Close Modal">&times;</button>
+      <img class="modal__content" id="modal-img" alt="" aria-hidden="true">
+      <p id="modalTitle" class="sr-only">Image Modal</p>
+      <p id="modalDescription" class="sr-only"></p>
+    </div>
+    <!-- index.html -->
+
+    <div class="container">
+      <h1 class="title">To-Do List</h1>
+      <form id="itemForm" class="form">
+        <label for="itemName" class="form__label">Add New Item:</label>
+        <input type="text" id="itemName" class="form__input" name="itemName" required>
+        <button type="submit" class="form__submitBtn">Add</button>
+      </form>
+      <ul id="itemList" class="list"></ul>
+    </div>
+    <script src="./js/example.js" defer></script>
+    <script src="./js/fetchApi.js" defer></script>
+  </body>
+</html>
